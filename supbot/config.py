@@ -1,7 +1,8 @@
 keys = {
-	"category": "accessories",
-	"prodName": "Tagless Tees",
-	"prodStyle": "white",
+	"category": "sweatshirts",
+	"prodName": "HQ Hooded",
+	"prodStyle": "Black",
+	"size": "Large",
 	"name": "Hanna Montana",
 	"email": "something@null.com",
 	"tel": "1234567890",
