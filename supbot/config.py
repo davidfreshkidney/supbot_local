@@ -1,8 +1,9 @@
 keys = {
 	"category": "bags",
 	"prodName": "Cabin Plus",
+	# "prodName": "Duffle Bag",
 	"exact": False,
-	# "prodStyle": "White",
+	# "prodStyle": "Camo",
 	# "size": "Large",
 	"name": "Hanna Montana",
 	"email": "something@null.com",

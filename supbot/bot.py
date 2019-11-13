@@ -6,8 +6,10 @@ from selenium.webdriver.common.by import By
 from config import keys
 import time
 
-browser = webdriver.Chrome('./chromedriver')
-t = 0.5
+options = webdriver.ChromeOptions()
+options.add_argument("user-data-dir=/Users/Leo/Library/Application Support/Google/Chrome/User Data/")
+browser = webdriver.Chrome('./chromedriver',options=options)
+t = 0.7
 ret_intval = 0.01
 
 
@@ -88,9 +90,9 @@ def order(ckeys):
 	sendAndCheck(cnElem, ckeys, 'card_num')
 	time.sleep(t)
 
-	cvvElem = browser.find_element_by_xpath('//*[@id="vval"]')
-	sendAndCheck(cvvElem, ckeys, 'cvv')
-	time.sleep(t)
+	# cvvElem = browser.find_element_by_xpath('//*[@id="vval"]')
+	# sendAndCheck(cvvElem, ckeys, 'cvv')
+	# time.sleep(t)
 
 	browser.find_element_by_xpath('//*[@id="credit_card_month"]/option[{}]'.format(ckeys['card_month'])).click()
 	time.sleep(t)
@@ -101,8 +103,8 @@ def order(ckeys):
 
 
 	# Term and conditions 
-	browser.find_element_by_xpath('//*[@id="cart-cc"]/fieldset/p[2]/label/div/ins').click()
-	time.sleep(t)
+	# browser.find_element_by_xpath('//*[@id="cart-cc"]/fieldset/p[2]/label/div/ins').click()
+	# time.sleep(t)
 
 	# Buy
 	# browser.find_element_by_xpath('//*[@id="pay"]/input').click()
