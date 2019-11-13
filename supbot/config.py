@@ -1,8 +1,9 @@
 keys = {
-	"category": "sweatshirts",
-	"prodName": "HQ Hooded",
-	"prodStyle": "Black",
-	"size": "Large",
+	"category": "bags",
+	"prodName": "Cabin Plus",
+	"exact": False,
+	# "prodStyle": "White",
+	# "size": "Large",
 	"name": "Hanna Montana",
 	"email": "something@null.com",
 	"tel": "1234567890",

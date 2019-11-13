@@ -34,16 +34,19 @@ def sendAndCheck(element, keyDict, key, delim=None):
 
 def getProductUrl(ckeys):
 	browser.get('https://www.supremenewyork.com/shop/all/{}'.format(ckeys['category']))
-	# browser.find_element_by_xpath('//*[@id="nav-categories"]/li[11]/a').click()
-	# time.sleep(1)
-	# //*[@id="container"]/li[3]/div/div[1]/a
-	browser.find_element_by_partial_link_text(ckeys['prodName']).click()
+	if ckeys['exact']:
+		browser.find_element_by_link_text(ckeys['prodName']).click()
+	else:
+		browser.find_element_by_partial_link_text(ckeys['prodName']).click()
 	time.sleep(1)
-	browser.find_element_by_xpath('//button[@data-style-name="{}"]'.format(ckeys['prodStyle'])).click()
-	time.sleep(1)
+
+	if 'prodStyle' in ckeys:
+		browser.find_element_by_xpath('//button[contains(@data-style-name, "{}")]'.format(ckeys['prodStyle'])).click()
+		# browser.find_element_by_partial_link_text(ckeys['prodStyle']).click()
+		time.sleep(1)
 	if 'size' in ckeys:
 		Select(browser.find_element_by_id('s')).select_by_visible_text(ckeys['size'])
-	# //*[@id="s"]
+	
 
 
 def order(ckeys):
