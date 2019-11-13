@@ -1,5 +1,7 @@
 keys = {
-	"product_url": "https://www.supremenewyork.com/shop/accessories/xfsjnihul/sc9vz5dg7",
+	"category": "accessories",
+	"prodName": "Tagless Tees",
+	"prodStyle": "white",
 	"name": "Hanna Montana",
 	"email": "something@null.com",
 	"tel": "1234567890",
