@@ -9,7 +9,7 @@ import time
 options = webdriver.ChromeOptions()
 options.add_argument("user-data-dir=/Users/Leo/Library/Application Support/Google/Chrome/User Data/")
 browser = webdriver.Chrome('./chromedriver',options=options)
-t = 0.7
+t = 1
 ret_intval = 0.01
 
 
@@ -87,7 +87,7 @@ def order(ckeys):
 
 	# Card info
 	cnElem = browser.find_element_by_xpath('//*[@id="cnb"]')
-	sendAndCheck(cnElem, ckeys, 'card_num')
+	sendAndCheck(cnElem, ckeys, 'card_num', delim=' ')
 	time.sleep(t)
 
 	# cvvElem = browser.find_element_by_xpath('//*[@id="vval"]')
