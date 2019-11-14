@@ -10,7 +10,7 @@ options = webdriver.ChromeOptions()
 options.add_argument("user-data-dir=/Users/Leo/Library/Application Support/Google/Chrome/User Data/")
 browser = webdriver.Chrome('./chromedriver',options=options)
 t = 1
-ret_intval = 0.01
+ret_intval = 0.1
 
 
 def isTheSame(element, keyDict, key, delim=None):
